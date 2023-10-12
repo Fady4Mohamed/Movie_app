@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:moviesapp/core/unite/style.dart';
+import 'package:moviesapp/core/utils/style.dart';
 import 'package:moviesapp/features/home/presntation/widgets/Trindinglist.dart';
 
 class Trinding extends StatelessWidget {
