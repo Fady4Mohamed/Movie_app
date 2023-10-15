@@ -3,25 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moviesapp/core/utils/app_routers.dart';
 
-class HomeNavigationBar extends StatelessWidget {
-  const HomeNavigationBar({
+class SearchNavigationBar extends StatelessWidget {
+  const SearchNavigationBar({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20,left: 40,right: 40),
+      padding: const EdgeInsets.only(top:20,left: 40,right: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           
-          Image.asset('assets/images/m home icon.png'),
           GestureDetector(
             onTap: () {
-              GoRouter.of(context).push(AppRouter.kSearchView);
+              Navigator.pop(context);
             },
-            child: Image.asset('assets/images/Play.png')),
+            child: Image.asset('assets/images/Home nonactive.png')),
+          Image.asset('assets/images/play evctiv.png'),
           GestureDetector(
             onTap: () {
              

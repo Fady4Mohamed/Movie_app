@@ -5,11 +5,22 @@ class CustomeSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        icon: Icon(Icons.search),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(40))
-      ),
+    return Row(
+      children: [
+        Spacer(),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * .9,
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: '🔎  search',
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(40),
+              ),
+            ),
+          ),
+        ),
+        Spacer()
+      ],
     );
   }
 }
