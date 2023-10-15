@@ -22,6 +22,7 @@ abstract class Styles {
   static const textStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
+    color: Color.fromARGB(255, 151, 151, 151)
   );
 }
 

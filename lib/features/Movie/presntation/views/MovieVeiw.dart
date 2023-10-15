@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:moviesapp/features/Movie/presntation/widgets/MovieData.dart';
+import 'package:moviesapp/features/Movie/presntation/widgets/MovieImage.dart';
 
 class MovieView extends StatelessWidget {
   const MovieView({super.key});
@@ -8,7 +10,8 @@ class MovieView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          
+          MovieImage(),
+          MovieData(),
         ],
       ),
     );
