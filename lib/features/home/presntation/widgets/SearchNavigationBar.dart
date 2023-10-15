@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:moviesapp/core/utils/app_routers.dart';
 
 class SearchNavigationBar extends StatelessWidget {
   const SearchNavigationBar({

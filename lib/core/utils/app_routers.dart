@@ -1,10 +1,11 @@
 import 'package:go_router/go_router.dart';
+import 'package:moviesapp/features/Movie/presntation/views/MovieVeiw.dart';
 import 'package:moviesapp/features/home/presntation/views/HomeView.dart';
 import 'package:moviesapp/features/home/presntation/views/SearchView.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
-  static const kMovieDetailsView = '/MoveiDetailsView';
+  static const kMovieView = '/MovieView';
   static const kSearchView = '/searchView';
 
   static final router = GoRouter(
@@ -17,7 +18,10 @@ abstract class AppRouter {
         path: kSearchView,
         builder: (context, state) => const SearchView(),
       ),
-      
+      GoRoute(
+        path: kMovieView,
+        builder: (context, state) => const MovieView(),
+      ),
     ],
   );
 }
