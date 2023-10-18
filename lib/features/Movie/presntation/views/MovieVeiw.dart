@@ -11,6 +11,7 @@ class MovieView extends StatelessWidget {
       body: Column(
         children: [
           MovieImage(),
+          SizedBox(height:  MediaQuery.of(context).size.height*.04),
           MovieData(),
         ],
       ),
