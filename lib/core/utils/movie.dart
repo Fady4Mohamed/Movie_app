@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class Movie extends Equatable {
+class MovieModel extends Equatable {
 	final String? title;
 	final int? year;
 	final String? director;
@@ -10,7 +10,7 @@ class Movie extends Equatable {
 	final String? video;
 	final String? duration;
 
-	const Movie({
+	const MovieModel({
 		this.title, 
 		this.year, 
 		this.director, 
@@ -21,7 +21,7 @@ class Movie extends Equatable {
 		this.duration, 
 	});
 
-	factory Movie.fromJson(Map<String, dynamic> json) => Movie(
+	factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
 				title: json['title'] as String?,
 				year: json['year'] as int?,
 				director: json['director'] as String?,
