@@ -9,12 +9,12 @@ class MovieImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-       height: MediaQuery.of(context).size.height*.4,
+       height: MediaQuery.of(context).size.height*.36,
           width:  MediaQuery.of(context).size.width,
       child: Stack(
         children: [
           Image.asset('assets/images/movie 1.jpg',
-          height: MediaQuery.of(context).size.height*.4,
+          height: MediaQuery.of(context).size.height*.36,
           width:  MediaQuery.of(context).size.width,
           fit: BoxFit.fill,
           ),
@@ -28,10 +28,15 @@ class MovieImage extends StatelessWidget {
               child: Image.asset('assets/images/Path.png'),
             ),
           ),
-          Center(
-            child: CircleAvatar(
-              backgroundColor: Color.fromARGB(255, 251, 249, 249).withOpacity(.4),
-              radius: 30,
+          GestureDetector(
+            onTap: () {
+              
+            },
+            child: Center(
+              child: CircleAvatar(
+                backgroundColor: Color.fromARGB(255, 251, 249, 249).withOpacity(.4),
+                radius: 30,
+              ),
             ),
           )
           ,

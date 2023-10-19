@@ -10,8 +10,8 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        padding: EdgeInsets.all(0),
         children: [
           SearchTitel(),
           CustomeSearchBar(),
