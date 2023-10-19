@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:moviesapp/core/utils/app_routers.dart';
 import 'package:moviesapp/core/utils/style.dart';
-import 'package:moviesapp/features/Movie/presntation/widgets/ReladtedMovieItem.dart';
 import 'package:moviesapp/features/Movie/presntation/widgets/RelatedMovieview.dart';
 
 class RelatedMovies extends StatelessWidget {
