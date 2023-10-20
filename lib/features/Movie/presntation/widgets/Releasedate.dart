@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 import 'package:moviesapp/core/utils/style.dart';
 import 'package:moviesapp/features/Movie/presntation/widgets/kindecontainer.dart';
 
 class Releasedate extends StatelessWidget {
-  const Releasedate({super.key});
-
+  const Releasedate({super.key, required this.movie});
+final MovieModel movie;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,7 +20,7 @@ class Releasedate extends StatelessWidget {
         SizedBox(height: MediaQuery.of(context).size.height*.02 ,),
         Row(
           children: [
-            Text('December 9, 2017',style: Styles.textStyle16,),
+            Text(movie.year.toString(),style: Styles.textStyle16,),
             SizedBox(width: MediaQuery.of(context).size.width*.15,),
           Kindecontainer(text: 'Action'),
           SizedBox(width: 16,),

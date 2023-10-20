@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:moviesapp/core/utils/app_routers.dart';
 
 class ContinueWatching extends StatelessWidget {
   const ContinueWatching({
-    super.key,
+    super.key, required this.contained,
   });
-
+final Widget contained;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,15 +15,9 @@ class ContinueWatching extends StatelessWidget {
         width:MediaQuery.of(context).size.width*.9 ,
         child: AspectRatio(
           aspectRatio:327/191,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              image: DecorationImage(
-                image: AssetImage('assets/images/movie 1.jpg'),
-                fit: BoxFit.fill,
-              )
-            ),
-          ),
+          
+            child: contained
+         
         ),
       ),
     );

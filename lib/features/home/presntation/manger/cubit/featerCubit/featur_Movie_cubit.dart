@@ -28,7 +28,6 @@ final List <MovieModel> Movielist =[];
    {
     Movielist.addAll(Movies);
     emit(FeaturMoviesuccsed());
-     print('succed');
 
    });
  }

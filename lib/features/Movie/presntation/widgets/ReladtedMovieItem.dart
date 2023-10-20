@@ -2,12 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moviesapp/core/utils/app_routers.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 
 class ReladtedMovieItem extends StatelessWidget {
   const ReladtedMovieItem({
-    super.key,
+    super.key, required this.movie,
   });
-
+final MovieModel movie;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -22,7 +23,7 @@ class ReladtedMovieItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
-     image: AssetImage('assets/images/movie 1.jpg'),
+     image: NetworkImage(movie.cover!),
      fit: BoxFit.fill,
         )
       ),

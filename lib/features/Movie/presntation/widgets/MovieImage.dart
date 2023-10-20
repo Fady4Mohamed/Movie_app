@@ -1,11 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 
 class MovieImage extends StatelessWidget {
   const MovieImage({
-    super.key,
+    super.key, required this.movie,
   });
-
+ final MovieModel movie;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -13,7 +14,7 @@ class MovieImage extends StatelessWidget {
           width:  MediaQuery.of(context).size.width,
       child: Stack(
         children: [
-          Image.asset('assets/images/movie 1.jpg',
+          Image.network(movie.cover!,
           height: MediaQuery.of(context).size.height*.36,
           width:  MediaQuery.of(context).size.width,
           fit: BoxFit.fill,

@@ -1,20 +1,22 @@
 
 import 'package:flutter/material.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 import 'package:moviesapp/core/utils/style.dart';
 import 'package:moviesapp/features/home/presntation/widgets/Trindinglist.dart';
 
 class Trinding extends StatelessWidget {
   const Trinding({
-    super.key,
+    super.key, this.contained, this.movies,
   });
-
+  final List<MovieModel>? movies;
+final Widget? contained;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Trindtext(),
         SizedBox(height: 20,),
-        TrindingList(),
+        TrindingList(contained: contained,movies: movies,),
       ],
     );
   }

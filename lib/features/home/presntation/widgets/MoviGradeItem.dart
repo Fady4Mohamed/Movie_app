@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:moviesapp/core/utils/app_routers.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 
 class MovieGradeItem extends StatelessWidget {
   const MovieGradeItem({
-    super.key,
+    super.key, required this.movie,
   });
-
+final MovieModel movie;
   @override
   Widget build(BuildContext context) {
+    print(movie.title);
+     print(movie.cover);
     return GestureDetector(
       onTap: () {
-         GoRouter.of(context).push(AppRouter.kMovieView);
+         GoRouter.of(context).push(AppRouter.kMovieView,extra: movie);
       },
       child: SizedBox(
         height: 250,
@@ -23,7 +26,7 @@ class MovieGradeItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/movie 1.jpg'),
+                    image:NetworkImage(movie.cover!),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -34,12 +37,18 @@ class MovieGradeItem extends StatelessWidget {
             ),
             SizedBox(
               height: 16,
+             
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('name'),
+                  SizedBox(
+                    width:MediaQuery.of(context).size.width * .2 ,
+                    child: Text(movie.title!,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    )),
                   Text(
-                    '(2022)',
+                    '(${movie.year!})',
                     style: TextStyle(
                       color: Color.fromARGB(221, 79, 78, 78),
                     ),

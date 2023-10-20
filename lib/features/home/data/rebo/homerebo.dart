@@ -40,12 +40,7 @@ Future<Either<ServerFailure,List<MovieModel>>> fetchMovies() async {
   try{
     var data = await _apiserves.get();
       List<MovieModel> Movies = [];
-    for (var item in data['action']) {
-        
-           Movies.add(MovieModel.fromJson(item));
-        }   
-
-      for (var item in data['drama']) {
+         for (var item in data['drama']) {
         
            Movies.add(MovieModel.fromJson(item));
         }    

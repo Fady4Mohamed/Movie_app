@@ -13,7 +13,7 @@ class trindingmoviesCubit extends Cubit<TrindingMoviesState> {
  final homerebo _homerebo;
 
 
- Future<void> getNewstBook() async{
+ Future<void> getTrindingMovies() async{
   emit(TrindingMoviesloding());
     var data=await  _homerebo.fetchTrindingMovies();
     emit(TrindingMoviesloding());

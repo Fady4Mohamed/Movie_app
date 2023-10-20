@@ -16,7 +16,7 @@ class MovieModel extends Equatable {
 		this.director, 
 		this.rating, 
 		this.summary, 
-		this.cover, 
+		 this.cover, 
 		this.video, 
 		this.duration, 
 	});

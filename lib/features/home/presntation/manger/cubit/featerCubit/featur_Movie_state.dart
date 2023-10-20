@@ -1,4 +1,4 @@
-part of 'featur_book_cubit.dart';
+part of 'featur_Movie_cubit.dart';
 
 sealed class FeaturMovieState extends Equatable {
   const FeaturMovieState();
