@@ -8,7 +8,7 @@ import 'package:moviesapp/features/home/presntation/widgets/ContinuWatching.dart
 import 'package:moviesapp/features/home/presntation/widgets/Trinding.dart';
 
 class HomeViewBoody extends StatefulWidget {
-  const HomeViewBoody({
+  const  HomeViewBoody({
     super.key,
   });
 

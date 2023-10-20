@@ -8,7 +8,7 @@ final List<MovieModel> movies;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .67,
+      height: MediaQuery.of(context).size.height * .63,
       child: GridView.builder(
         padding: EdgeInsets.only(left: 10,right: 10,top: 20),
         itemCount: movies.length,

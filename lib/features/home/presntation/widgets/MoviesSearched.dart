@@ -28,7 +28,7 @@ class _MoviesSearchState extends State<MoviesSearch> {
         }
         if (state is FeaturMovieloding) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * .67,
+            height: MediaQuery.of(context).size.height * .63,
             width: MediaQuery.of(context).size.width,
             child: LoadingAnimationWidget.flickr(
                 leftDotColor: Colors.cyan,
@@ -38,7 +38,7 @@ class _MoviesSearchState extends State<MoviesSearch> {
         }
         if (state is FeaturMoviefailure) {
           return SizedBox(
-             height: MediaQuery.of(context).size.height * .67,
+             height: MediaQuery.of(context).size.height * .63,
             child: Center(
                 child: Text(
               state.errorMassage,
@@ -47,7 +47,7 @@ class _MoviesSearchState extends State<MoviesSearch> {
           );
         } else {
           return SizedBox(
-             height: MediaQuery.of(context).size.height * .67,
+             height: MediaQuery.of(context).size.height * .63,
             child: Center(
                 child: Text(
               'there was an error',

@@ -10,8 +10,7 @@ class MovieGradeItem extends StatelessWidget {
 final MovieModel movie;
   @override
   Widget build(BuildContext context) {
-    print(movie.title);
-     print(movie.cover);
+   
     return GestureDetector(
       onTap: () {
          GoRouter.of(context).push(AppRouter.kMovieView,extra: movie);
