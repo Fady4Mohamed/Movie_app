@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:moviesapp/core/utils/style.dart';
 
@@ -17,7 +16,7 @@ class SearchTitel extends StatelessWidget {
       ),
       child: SizedBox(
         width: MediaQuery.of(context).size.width * .7,
-        child: Text(
+        child: const Text(
           'Find Movies, Tv series, and more..',
           style: Styles.textStyle28,
         ),

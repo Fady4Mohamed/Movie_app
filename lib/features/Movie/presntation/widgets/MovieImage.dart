@@ -35,7 +35,7 @@ class MovieImage extends StatelessWidget {
             },
             child: Center(
               child: CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 251, 249, 249).withOpacity(.4),
+                backgroundColor:const Color.fromARGB(255, 251, 249, 249).withOpacity(.4),
                 radius: 30,
               ),
             ),

@@ -10,9 +10,9 @@ final String text;
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Color.fromARGB(255, 169, 169, 169) ,width: 1),
+        border: Border.all(color:const Color.fromARGB(255, 169, 169, 169) ,width: 1),
         borderRadius: BorderRadius.circular(60),
-        color: Color.fromARGB(255, 34, 33, 33)
+        color:const Color.fromARGB(255, 34, 33, 33)
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),

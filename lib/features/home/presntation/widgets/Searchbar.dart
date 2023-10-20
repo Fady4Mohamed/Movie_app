@@ -7,7 +7,7 @@ class CustomeSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(),
+        const Spacer(),
         SizedBox(
           width: MediaQuery.of(context).size.width * .9,
           child: TextField(
@@ -19,7 +19,7 @@ class CustomeSearchBar extends StatelessWidget {
             ),
           ),
         ),
-        Spacer()
+        const Spacer()
       ],
     );
   }

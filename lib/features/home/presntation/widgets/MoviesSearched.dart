@@ -19,12 +19,14 @@ class _MoviesSearchState extends State<MoviesSearch> {
     // TODO: implement initState
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FeaturMovieCubit, FeaturMovieState>(
       builder: (context, state) {
         if (state is FeaturMoviesuccsed) {
-          return MovieGrade(movies:BlocProvider.of<FeaturMovieCubit>(context).Movielist);
+          return MovieGrade(
+              movies: BlocProvider.of<FeaturMovieCubit>(context).Movielist);
         }
         if (state is FeaturMovieloding) {
           return SizedBox(
@@ -38,7 +40,7 @@ class _MoviesSearchState extends State<MoviesSearch> {
         }
         if (state is FeaturMoviefailure) {
           return SizedBox(
-             height: MediaQuery.of(context).size.height * .63,
+            height: MediaQuery.of(context).size.height * .63,
             child: Center(
                 child: Text(
               state.errorMassage,
@@ -47,8 +49,8 @@ class _MoviesSearchState extends State<MoviesSearch> {
           );
         } else {
           return SizedBox(
-             height: MediaQuery.of(context).size.height * .63,
-            child: Center(
+            height: MediaQuery.of(context).size.height * .63,
+            child: const Center(
                 child: Text(
               'there was an error',
               style: Styles.textStyle28,

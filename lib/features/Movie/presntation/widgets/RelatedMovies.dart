@@ -5,18 +5,20 @@ import 'package:moviesapp/features/Movie/presntation/widgets/RelatedMovieview.da
 
 class RelatedMovies extends StatelessWidget {
   const RelatedMovies({super.key, required this.movie});
-final MovieModel movie;
+  final MovieModel movie;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Row(
           children: [
-            Text('Related Movies',style: Styles.textStyle20,),
+            Text(
+              'Related Movies',
+              style: Styles.textStyle20,
+            ),
           ],
         ),
-         RelatedMovieView(),
-
+        RelatedMovieView(),
       ],
     );
   }

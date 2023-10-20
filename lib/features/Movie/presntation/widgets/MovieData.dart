@@ -15,11 +15,11 @@ final MovieModel movie;
       children: [
         MovieTitelRow(movie: movie),
         SizedBox(height:  MediaQuery.of(context).size.height*.01,),
-        Line(),
+        const Line(),
         SizedBox(height:  MediaQuery.of(context).size.height*.01,),
         Releasedate(movie: movie),
          SizedBox(height:  MediaQuery.of(context).size.height*.01,),
-        Line(),
+        const Line(),
          SizedBox(height:  MediaQuery.of(context).size.height*.01,),
         MovieDescrbtion(movie: movie),
           SizedBox(height:  MediaQuery.of(context).size.height*.02,),

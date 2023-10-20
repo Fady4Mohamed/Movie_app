@@ -8,7 +8,7 @@ import 'package:moviesapp/features/home/presntation/widgets/ContinuWatching.dart
 import 'package:moviesapp/features/home/presntation/widgets/Trinding.dart';
 
 class HomeViewBoody extends StatefulWidget {
-  const  HomeViewBoody({
+  const HomeViewBoody({
     super.key,
   });
 
@@ -17,59 +17,65 @@ class HomeViewBoody extends StatefulWidget {
 }
 
 class _HomeViewBoodyState extends State<HomeViewBoody> {
-
   @override
   void initState() {
-  BlocProvider.of<trindingmoviesCubit>(context).getTrindingMovies();
-   BlocProvider.of<FeaturMovieCubit>(context).getfeaturMovie();
+    BlocProvider.of<trindingmoviesCubit>(context).getTrindingMovies();
+    BlocProvider.of<FeaturMovieCubit>(context).getfeaturMovie();
     // TODO: implement initState
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<trindingmoviesCubit, TrindingMoviesState>(
-    builder: (context, state) {
-     if(state is TrindingMoviesloding){
-   return Column(
-    children: [
-      ContinueWatching(
-        contained:LoadingAnimationWidget.flickr(
-          leftDotColor: Colors.cyan,
-           rightDotColor: Colors.amber, 
-           size: 200) ),
-      Trinding( contained: LoadingAnimationWidget.flickr(
-          leftDotColor: Colors.cyan,
-           rightDotColor: Colors.amber, 
-           size: 60) ,),
-    ],
-   ) ;
-    }
-   
-     if(state is TrindingMoviessuccsed){
-      return  Column(
-    children: [
-      ContinueWatching(contained: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(
-                  image: NetworkImage(state.Movies[0].cover!),
-                  fit: BoxFit.fill,
-                )
+      builder: (context, state) {
+        if (state is TrindingMoviesloding) {
+          return Column(
+            children: [
+              ContinueWatching(
+                  contained: LoadingAnimationWidget.flickr(
+                      leftDotColor: Colors.cyan,
+                      rightDotColor: Colors.amber,
+                      size: 200)),
+              Trinding(
+                contained: LoadingAnimationWidget.flickr(
+                    leftDotColor: Colors.cyan,
+                    rightDotColor: Colors.amber,
+                    size: 60),
               ),
-            ),),
-            
-      Trinding(movies: state.Movies),
-    ]
-   ) ;
-    }  
-     if(state is TrindingMoviesfailer){
-      return Center(child: Text(state.errorMassage,style: Styles.textStyle28,));
-    }else{
-       return Center(child: Text('there was an error',style: Styles.textStyle28,));
-    }
-    
-    },
-      
+            ],
+          );
+        }
+
+        if (state is TrindingMoviessuccsed) {
+          return Column(children: [
+            ContinueWatching(
+              contained: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    image: DecorationImage(
+                      image: NetworkImage(state.Movies[0].cover!),
+                      fit: BoxFit.fill,
+                    )),
+              ),
+            ),
+            Trinding(movies: state.Movies),
+          ]);
+        }
+        if (state is TrindingMoviesfailer) {
+          return Center(
+              child: Text(
+            state.errorMassage,
+            style: Styles.textStyle28,
+          ));
+        } else {
+          return const Center(
+              child: Text(
+            'there was an error',
+            style: Styles.textStyle28,
+          ));
+        }
+      },
     );
   }
 }

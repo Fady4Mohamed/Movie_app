@@ -14,7 +14,7 @@ final Widget? contained;
     return SizedBox(
       height:MediaQuery.of(context).size.height*.39 ,
       child: ListView.builder(
-        padding: EdgeInsets.all(0),
+        padding:const EdgeInsets.all(0),
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {

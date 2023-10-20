@@ -5,7 +5,7 @@ class Apiserves
   final Dio dio;
   Apiserves(this.dio);
   Future<Map<String,dynamic>>get() async {
-  var response = await Dio().get('$basURL');
+  var response = await Dio().get(basURL);
  return response.data;
   }
   
