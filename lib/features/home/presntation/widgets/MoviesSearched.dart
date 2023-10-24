@@ -30,8 +30,7 @@ final List<MovieModel> movies;
           );
         }
         if (state is FeaturMoviefailure) {
-          return SizedBox(
-            height: MediaQuery.of(context).size.height * .63,
+          return Expanded(
             child: Center(
                 child: Text(
               state.errorMassage,
@@ -39,9 +38,8 @@ final List<MovieModel> movies;
             )),
           );
         } else {
-          return SizedBox(
-            height: MediaQuery.of(context).size.height * .63,
-            child: const Center(
+          return const Expanded(
+            child:  Center(
                 child: Text(
               'there was an error',
               style: Styles.textStyle28,

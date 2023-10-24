@@ -37,11 +37,13 @@ class _HomeViewBoodyState extends State<HomeViewBoody> {
                       leftDotColor: Colors.cyan,
                       rightDotColor: Colors.amber,
                       size: 200)),
-              Trinding(
-                contained: LoadingAnimationWidget.flickr(
-                    leftDotColor: Colors.cyan,
-                    rightDotColor: Colors.amber,
-                    size: 60),
+              Expanded(
+                child: Trinding(
+                  contained: LoadingAnimationWidget.flickr(
+                      leftDotColor: Colors.cyan,
+                      rightDotColor: Colors.amber,
+                      size: 60),
+                ),
               ),
             ],
           );
@@ -59,21 +61,25 @@ class _HomeViewBoodyState extends State<HomeViewBoody> {
                     )),
               ),
             ),
-            Trinding(movies: state.Movies),
+            Expanded(child: Trinding(movies: state.Movies)),
           ]);
         }
         if (state is TrindingMoviesfailer) {
-          return Center(
-              child: Text(
-            state.errorMassage,
-            style: Styles.textStyle28,
-          ));
+          return Expanded(
+            child: Center(
+                child: Text(
+              state.errorMassage,
+              style: Styles.textStyle28,
+            )),
+          );
         } else {
-          return const Center(
-              child: Text(
-            'there was an error',
-            style: Styles.textStyle28,
-          ));
+          return const Expanded(
+            child:  Center(
+                child: Text(
+              'there was an error',
+              style: Styles.textStyle28,
+            )),
+          );
         }
       },
     );

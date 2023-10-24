@@ -23,6 +23,7 @@ class Trinding extends StatelessWidget {
           contained: contained,
           movies: movies,
         ),
+      
       ],
     );
   }

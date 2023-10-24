@@ -12,7 +12,8 @@ class HomeVeiw extends StatelessWidget {
       body: Column(
         children: [
           HomeAppBar(),
-          HomeViewBoody(),
+          
+          Expanded(child: HomeViewBoody()),
           HomeNavigationBar(),
           ],
       ),

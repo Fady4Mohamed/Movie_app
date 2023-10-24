@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:either_dart/either.dart';
 import 'package:moviesapp/core/utils/apiserves.dart';
 import 'package:moviesapp/core/utils/movie.dart';
-
 import '../../../../core/error/failre.dart';
 
 class homerebo{

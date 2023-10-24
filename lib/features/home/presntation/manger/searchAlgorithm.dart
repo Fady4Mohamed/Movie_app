@@ -11,7 +11,7 @@ class Search{
  List<MovieModel> Movies= BlocProvider.of<FeaturMovieCubit>(context).Movielist;
   List<MovieModel> searhedMovies=[];
   for(int i=0;i<Movies.length;i++){
-    if(Movies[i].title!.contains(bookName)){
+    if(Movies[i].title!.toLowerCase().contains(bookName.toLowerCase())){
       searhedMovies.add(Movies[i]);
     }
 

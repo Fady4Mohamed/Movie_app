@@ -11,8 +11,7 @@ class TrindingList extends StatelessWidget {
 final Widget? contained;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height:MediaQuery.of(context).size.height*.39 ,
+    return Expanded(
       child: ListView.builder(
         padding:const EdgeInsets.all(0),
         scrollDirection: Axis.horizontal,

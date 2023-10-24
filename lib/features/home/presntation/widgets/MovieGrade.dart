@@ -7,8 +7,7 @@ class MovieGrade extends StatelessWidget {
   final List<MovieModel> movies;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .63,
+    return Expanded(
       child: GridView.builder(
         padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
         itemCount: movies.length,

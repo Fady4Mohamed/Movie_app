@@ -17,15 +17,17 @@ class _SearchViewState extends State<SearchView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding:const EdgeInsets.all(0),
+      body: Column(
         children: [
           SearchTitel(),
           CustomeSearchBar(onChanged: (p0) {
             movieName=p0;
+            setState(() {
+              
+            });
           },),
           MoviesSearch(movies: Search.searchAlgorethem(movieName, context)),
-          SearchNavigationBar()
+         MediaQuery.of(context).viewInsets.bottom!=0? SizedBox():SearchNavigationBar()
         ],
       ),
     );

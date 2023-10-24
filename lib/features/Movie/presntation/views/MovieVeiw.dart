@@ -13,7 +13,10 @@ final MovieModel movie;
         children: [
           MovieImage(movie: movie),
           SizedBox(height:  MediaQuery.of(context).size.height*.02),
-          MovieData(movie: movie),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: MovieData(movie: movie),
+          ),
         ],
       ),
     );

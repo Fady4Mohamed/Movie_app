@@ -16,7 +16,6 @@ class FeaturMovieCubit extends Cubit<FeaturMovieState> {
     var data = await _homerebo.fetchMovies();
     data.fold((failer) {
       emit(FeaturMoviefailure(failer.errMessage));
-      print('erro');
     }, (Movies) {
       Movielist.addAll(Movies);
       emit(FeaturMoviesuccsed());

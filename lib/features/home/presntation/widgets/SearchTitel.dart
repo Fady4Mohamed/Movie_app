@@ -14,12 +14,16 @@ class SearchTitel extends StatelessWidget {
         left: 24,
         bottom: 24,
       ),
-      child: SizedBox(
-        width: MediaQuery.of(context).size.width * .7,
-        child: const Text(
-          'Find Movies, Tv series, and more..',
-          style: Styles.textStyle28,
-        ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .7,
+            child: const Text(
+              'Find Movies, Tv series, and more..',
+              style: Styles.textStyle28,
+            ),
+          ),
+        ],
       ),
     );
   }

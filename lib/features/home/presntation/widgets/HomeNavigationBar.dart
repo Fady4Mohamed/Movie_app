@@ -11,11 +11,9 @@ class HomeNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height * .05,
-        ),
+      
         Padding(
-          padding: const EdgeInsets.only(top: 0, left: 40, right: 40),
+          padding: const EdgeInsets.only(top: 20, left: 40, right: 40,bottom: 10),
           child: SizedBox(
             height: 35,
             child: Row(
