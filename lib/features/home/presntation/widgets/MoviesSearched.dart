@@ -1,24 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:moviesapp/core/utils/movie.dart';
 import 'package:moviesapp/core/utils/style.dart';
 import 'package:moviesapp/features/home/presntation/manger/cubit/featerCubit/featur_Movie_cubit.dart';
 import 'package:moviesapp/features/home/presntation/widgets/MovieGrade.dart';
 
-class MoviesSearch extends StatefulWidget {
-  const MoviesSearch({super.key});
+class MoviesSearch extends StatelessWidget {
+  const MoviesSearch({super.key, required this.movies});
+final List<MovieModel> movies;
 
-  @override
-  State<MoviesSearch> createState() => _MoviesSearchState();
-}
-
-class _MoviesSearchState extends State<MoviesSearch> {
-  @override
-  void initState() {
-    BlocProvider.of<FeaturMovieCubit>(context).getfeaturMovie();
-    // TODO: implement initState
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +17,7 @@ class _MoviesSearchState extends State<MoviesSearch> {
       builder: (context, state) {
         if (state is FeaturMoviesuccsed) {
           return MovieGrade(
-              movies: BlocProvider.of<FeaturMovieCubit>(context).Movielist);
+              movies: movies);
         }
         if (state is FeaturMovieloding) {
           return SizedBox(
