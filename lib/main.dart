@@ -7,8 +7,12 @@ import 'package:moviesapp/core/utils/app_routers.dart';
 import 'package:moviesapp/features/home/data/rebo/homerebo.dart';
 import 'package:moviesapp/features/home/presntation/manger/cubit/TrindingMovie/TrindingMovies_cubit.dart';
 import 'package:moviesapp/features/home/presntation/manger/cubit/featerCubit/featur_Movie_cubit.dart';
-
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+void main() async{
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 

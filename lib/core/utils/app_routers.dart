@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:moviesapp/core/utils/movie.dart';
 import 'package:moviesapp/features/Movie/presntation/views/MovieVeiw.dart';
+import 'package:moviesapp/features/auth/loginView.dart';
 import 'package:moviesapp/features/home/presntation/views/HomeView.dart';
 import 'package:moviesapp/features/home/presntation/views/SearchView.dart';
 
@@ -13,11 +14,15 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-      builder: (context, state) => const HomeVeiw(),
+      builder: (context, state) => const nloginpage(),
       ),
       GoRoute(
         path: kSearchView,
         builder: (context, state) => const SearchView(),
+      ),
+       GoRoute(
+        path: kHomeView,
+        builder: (context, state) => const HomeVeiw(),
       ),
       GoRoute(
         path: kMovieView,
